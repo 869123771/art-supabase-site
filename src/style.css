@@ -1129,6 +1129,7 @@ img {
 }
 
 .showcase-image {
+  display: block;
   height: 343px;
   overflow: hidden;
   background: #dce9f3;

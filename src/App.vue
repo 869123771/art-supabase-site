@@ -18,27 +18,27 @@ const showcases = [
     title: '把每一程运输，放进同一个工作台。',
     description: '订单、运力、在途与结算形成连续的业务视图，让调度和管理都能看到当前进展。',
     image: 'dashboard.png',
-    width: 1280,
-    height: 720,
+    width: 1920,
+    height: 878,
     alt: 'Art Supabase Pro 运输运营工作台真实截图',
   },
   {
-    label: '智能协同',
-    title: '让 AI 进入业务流程，也留在治理边界内。',
-    description: '识别、建议、研判与审计相互衔接；关键业务数据始终由有权限的人确认。',
-    image: 'ai-order.png',
-    width: 1280,
-    height: 720,
-    alt: 'Art Supabase Pro AI 智能填单真实截图',
+    label: '运输开单',
+    title: '从一张运输单，开启协同的每一步。',
+    description: '运输路线、收发货信息与费用操作集中在同一工作区，减少跨页面切换。',
+    image: 'order-entry.png',
+    width: 1920,
+    height: 878,
+    alt: 'Art Supabase Pro 货物运输单开单页面真实截图',
   },
   {
     label: '安全生产',
-    title: '从设备与资质，到每一次应急演练。',
-    description: '分散的安全资料和执行记录，在统一平台内得到结构化管理和追踪。',
+    title: '让每一次应急演练，有计划、有记录。',
+    description: '应急演练计划、执行状态与责任信息集中呈现，让安全任务有据可查。',
     image: 'safety.png',
     width: 1920,
-    height: 794,
-    alt: 'Art Supabase Pro 安全生产管理真实截图',
+    height: 878,
+    alt: 'Art Supabase Pro 应急演练计划页面真实截图',
   },
 ] as const
 const activeShowcase = ref(0)
@@ -128,8 +128,8 @@ function closeMenu() {
               </div>
               <img
                 :src="`${base}dashboard.png`"
-                width="1280"
-                height="720"
+                width="1920"
+                height="878"
                 alt="Art Supabase Pro 运输运营工作台真实截图"
                 fetchpriority="high"
               />
@@ -295,7 +295,13 @@ function closeMenu() {
               </button>
             </div>
             <div class="showcase-view">
-              <div class="showcase-image">
+              <a
+                class="showcase-image"
+                :href="`${base}${currentShowcase.image}`"
+                target="_blank"
+                rel="noopener noreferrer"
+                :aria-label="`查看${currentShowcase.label}截图原图`"
+              >
                 <img
                   :key="currentShowcase.image"
                   :src="`${base}${currentShowcase.image}`"
@@ -304,7 +310,7 @@ function closeMenu() {
                   :alt="currentShowcase.alt"
                   loading="lazy"
                 />
-              </div>
+              </a>
               <div class="showcase-caption">
                 <div>
                   <span>{{ currentShowcase.label }}</span>
