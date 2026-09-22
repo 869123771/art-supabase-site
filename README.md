@@ -1,39 +1,46 @@
-# art-supabase-site
+# 亿企工场官网 · Art Supabase Site
 
-#### 介绍
-{**以下是 Gitee 平台说明，您可以替换此简介**
-Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用 Gitee 实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+Art Supabase Pro 项目群的独立官方网站。站点展示统一平台、业务模块、真实产品截图与技术架构，不依赖主平台的登录态或 Supabase 环境变量。
 
-#### 软件架构
-软件架构说明
+## 项目位置
 
+- 官网子仓：`modules/art-supabase-site`
+- Gitee：https://gitee.com/wangyanghub/art-supabase-site
+- 主平台：https://gitee.com/wangyanghub/art-supabase-pro
+- 在线演示：https://869123771.github.io/art-supabase-pro/
+- 产品文档：https://869123771.github.io/art-supabase-doc/
 
-#### 安装教程
+## 本地开发
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+需要 Node.js 22+ 与 pnpm 11.9+。
 
-#### 使用说明
+```powershell
+pnpm install
+pnpm dev
+```
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+本地地址：`http://localhost:3022/art-supabase-site/`。
 
-#### 参与贡献
+```powershell
+pnpm typecheck
+pnpm format:check
+pnpm build
+pnpm preview
+```
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+生产文件输出到 `dist/`。默认站点路径是 `/art-supabase-site/`；部署到独立域名根目录时，设置 `SITE_BASE=/` 后重新构建。
 
+## 内容维护
 
-#### 特技
+- 模块名称、简介和仓库链接：`src/modules.ts`。新增或修改子仓后同步更新此文件。
+- 页面结构与正文：`src/App.vue`；视觉样式：`src/style.css`。
+- 产品截图：`public/`。这些图片来自主项目的真实运行截图；更新时同步检查替代文本和内容描述。
+- 官网只介绍现有能力及建设方向。MES、WMS 等仍在建设的业务，不用“已上线”等措辞代替真实状态。
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+## 发布
+
+仓库包含 GitHub Pages 工作流。将 Gitee 仓库镜像到同名 GitHub 仓库，并在 GitHub 仓库的 **Settings → Pages → Source** 选择 **GitHub Actions** 后，推送 `master` 会构建和发布网站。尚未配置镜像与 Pages 时，仓库仍可独立构建并部署 `dist/` 到任意静态站点服务。
+
+## 许可证
+
+与主项目保持一致，采用 [MulanPSL-2.0](https://gitee.com/wangyanghub/art-supabase-pro/blob/master/LICENSE) 许可证。

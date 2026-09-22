@@ -1,0 +1,31 @@
+{
+  "name": "art-supabase-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Art Supabase Pro 官方网站",
+  "packageManager": "pnpm@11.9.0",
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=11.9.0"
+  },
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 3022",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 3022",
+    "typecheck": "vue-tsc --noEmit",
+    "check": "pnpm format:check && pnpm build",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "vue": "^3.5.38"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.7",
+    "prettier": "^3.8.4",
+    "typescript": "~6.0.3",
+    "vite": "^8.1.0",
+    "vue-tsc": "^3.1.0"
+  }
+}

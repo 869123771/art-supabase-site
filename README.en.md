@@ -1,36 +1,28 @@
-# art-supabase-site
+# Art Supabase Site
 
-#### Description
-{**When you're done, you can delete the content in this README and update the file with details for others getting started with your repository**}
+The independent official website for the Art Supabase Pro ecosystem. It introduces the shared platform, business modules, real product screenshots, and architecture.
 
-#### Software Architecture
-Software architecture description
+## Development
 
-#### Installation
+Requires Node.js 22+ and pnpm 11.9+.
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+```sh
+pnpm install
+pnpm dev
+```
 
-#### Instructions
+Open `http://localhost:3022/art-supabase-site/`.
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+```sh
+pnpm typecheck
+pnpm format:check
+pnpm build
+```
 
-#### Contribution
+The static output is in `dist/`. Set `SITE_BASE=/` to build for a root domain instead of the default `/art-supabase-site/` path.
 
-1.  Fork the repository
-2.  Create Feat_xxx branch
-3.  Commit your code
-4.  Create Pull Request
+Product information lives in `src/modules.ts`; page content and styles are in `src/App.vue` and `src/style.css`.
 
+## License
 
-#### Gitee Feature
-
-1.  You can use Readme\_XXX.md to support different languages, such as Readme\_en.md, Readme\_zh.md
-2.  Gitee blog [blog.gitee.com](https://blog.gitee.com)
-3.  Explore open source project [https://gitee.com/explore](https://gitee.com/explore)
-4.  The most valuable open source project [GVP](https://gitee.com/gvp)
-5.  The manual of Gitee [https://gitee.com/help](https://gitee.com/help)
-6.  The most popular members  [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+[MulanPSL-2.0](https://gitee.com/wangyanghub/art-supabase-pro/blob/master/LICENSE)
