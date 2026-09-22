@@ -39,7 +39,7 @@ pnpm preview
 
 ## 发布
 
-仓库包含 GitHub Pages 工作流。将 Gitee 仓库镜像到同名 GitHub 仓库，并在 GitHub 仓库的 **Settings → Pages → Source** 选择 **GitHub Actions** 后，推送 `master` 会构建和发布网站。也可以将 `master/docs` 用作静态站点发布目录。尚未配置镜像与 Pages 时，可独立部署 `docs/` 到任意静态站点服务。
+本仓不使用 GitHub Actions 发布工作流。`master/docs` 是静态站点发布目录；镜像到 GitHub 后可将该目录设为 Pages 来源，也可将 `docs/` 部署到其他静态站点服务。主仓统一发布时执行 `pnpm repo:publish -- "提交说明"`，会重新构建并提交所有有改动的子仓及主仓。
 
 ## 许可证
 
