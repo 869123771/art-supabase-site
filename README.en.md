@@ -11,7 +11,7 @@ pnpm install
 pnpm dev
 ```
 
-Open `http://localhost:3022/art-supabase-site/`.
+Open `http://localhost:3022/`.
 
 ```sh
 pnpm typecheck
@@ -19,10 +19,10 @@ pnpm format:check
 pnpm build
 ```
 
-The static output is in `dist/`. Set `SITE_BASE=/` to build for a root domain instead of the default `/art-supabase-site/` path.
+The versioned static output is in `docs/`, as in the other subrepositories. Commit the updated `docs/` after building. Set `SITE_BASE=/` to build for a root domain instead of the default `/art-supabase-site/` path. The host's `pnpm modules:build -- site` uses a separate temporary output directory.
 
 Product information lives in `src/modules.ts`; page content and styles are in `src/App.vue` and `src/style.css`.
 
 ## License
 
-[MulanPSL-2.0](https://gitee.com/wangyanghub/art-supabase-pro/blob/master/LICENSE)
+[MulanPSL-2.0](LICENSE)

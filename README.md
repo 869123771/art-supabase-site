@@ -19,7 +19,7 @@ pnpm install
 pnpm dev
 ```
 
-本地地址：`http://localhost:3022/art-supabase-site/`。
+本地地址：`http://localhost:3022/`。
 
 ```powershell
 pnpm typecheck
@@ -28,7 +28,7 @@ pnpm build
 pnpm preview
 ```
 
-生产文件输出到 `dist/`。默认站点路径是 `/art-supabase-site/`；部署到独立域名根目录时，设置 `SITE_BASE=/` 后重新构建。
+生产文件输出到受 Git 管理的 `docs/`，与其他业务子仓一致。构建后将源码和更新后的 `docs/` 一起提交。默认站点路径是 `/art-supabase-site/`；部署到独立域名根目录时，设置 `SITE_BASE=/` 后重新构建。主仓运行 `pnpm modules:build -- site` 时会把临时产物输出到主仓 `.artifacts/module-builds/`，不改动已提交的 `docs/`。
 
 ## 内容维护
 
@@ -39,8 +39,8 @@ pnpm preview
 
 ## 发布
 
-仓库包含 GitHub Pages 工作流。将 Gitee 仓库镜像到同名 GitHub 仓库，并在 GitHub 仓库的 **Settings → Pages → Source** 选择 **GitHub Actions** 后，推送 `master` 会构建和发布网站。尚未配置镜像与 Pages 时，仓库仍可独立构建并部署 `dist/` 到任意静态站点服务。
+仓库包含 GitHub Pages 工作流。将 Gitee 仓库镜像到同名 GitHub 仓库，并在 GitHub 仓库的 **Settings → Pages → Source** 选择 **GitHub Actions** 后，推送 `master` 会构建和发布网站。也可以将 `master/docs` 用作静态站点发布目录。尚未配置镜像与 Pages 时，可独立部署 `docs/` 到任意静态站点服务。
 
 ## 许可证
 
-与主项目保持一致，采用 [MulanPSL-2.0](https://gitee.com/wangyanghub/art-supabase-pro/blob/master/LICENSE) 许可证。
+与主项目保持一致，采用 [MulanPSL-2.0](LICENSE) 许可证。
