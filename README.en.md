@@ -1,6 +1,6 @@
-# Art Supabase Site
+# Yiqi Workshop Site
 
-The independent official website for the Art Supabase Pro ecosystem. It introduces the shared platform, business modules, real product screenshots, and architecture.
+The independent official website for the Yiqi Workshop ecosystem. It introduces the shared platform, business modules, real product screenshots, and architecture.
 
 ## Development
 

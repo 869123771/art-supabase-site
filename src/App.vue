@@ -20,7 +20,7 @@ const showcases = [
     image: 'dashboard.png',
     width: 1920,
     height: 878,
-    alt: 'Art Supabase Pro 运输运营工作台真实截图',
+    alt: '亿企工场运输运营工作台真实截图',
   },
   {
     label: '运输开单',
@@ -29,7 +29,7 @@ const showcases = [
     image: 'order-entry.png',
     width: 1920,
     height: 878,
-    alt: 'Art Supabase Pro 货物运输单开单页面真实截图',
+    alt: '亿企工场货物运输单开单页面真实截图',
   },
   {
     label: '安全生产',
@@ -38,7 +38,7 @@ const showcases = [
     image: 'safety.png',
     width: 1920,
     height: 878,
-    alt: 'Art Supabase Pro 应急演练计划页面真实截图',
+    alt: '亿企工场应急演练计划页面真实截图',
   },
 ] as const
 const activeShowcase = ref(0)
@@ -57,7 +57,7 @@ function closeMenu() {
       <div class="container header-inner">
         <a class="brand" href="#top" aria-label="亿企工场，返回首页" @click="closeMenu">
           <img :src="`${base}logo.webp`" width="38" height="38" alt="" />
-          <span class="brand-text"><strong>亿企工场</strong><small>ART SUPABASE PRO</small></span>
+          <span class="brand-text"><strong>亿企工场</strong><small>YIQI WORKSHOP</small></span>
         </a>
         <nav :class="['primary-nav', { 'is-open': menuOpen }]" aria-label="主导航">
           <a href="#platform" @click="closeMenu">平台能力</a>
@@ -130,7 +130,7 @@ function closeMenu() {
                 :src="`${base}dashboard.png`"
                 width="1920"
                 height="878"
-                alt="Art Supabase Pro 运输运营工作台真实截图"
+                alt="亿企工场运输运营工作台真实截图"
                 fetchpriority="high"
               />
             </div>
@@ -149,7 +149,7 @@ function closeMenu() {
         <div class="container">
           <div class="section-heading split-heading">
             <div>
-              <p class="eyebrow">WHY ART SUPABASE PRO</p>
+              <p class="eyebrow">WHY YIQI WORKSHOP</p>
               <h2>让复杂业务，<br />运行在同一个坐标系里。</h2>
             </div>
             <p>
@@ -349,7 +349,7 @@ function closeMenu() {
           </div>
           <div
             class="architecture-diagram"
-            aria-label="架构图：各业务模块连接 Art Supabase Pro 平台运行时，平台建立在 Supabase 服务之上"
+            aria-label="架构图：各业务模块连接亿企工场平台运行时，平台建立在 Supabase 服务之上"
           >
             <div class="diagram-top">
               <span>SCM</span><span>MES</span><span>WMS</span><span>TMS</span><span>FMS</span
@@ -359,7 +359,7 @@ function closeMenu() {
             <div class="diagram-host">
               <img :src="`${base}logo.webp`" width="45" height="45" alt="" />
               <div>
-                <strong>Art Supabase Pro</strong><small>统一运行时 · 权限 · 工作流 · AI 治理</small>
+                <strong>亿企工场</strong><small>统一运行时 · 权限 · 工作流 · AI 治理</small>
               </div>
             </div>
             <div class="diagram-connector" aria-hidden="true"></div>
@@ -402,7 +402,7 @@ function closeMenu() {
         <div>
           <a class="brand footer-brand" href="#top"
             ><img :src="`${base}logo.webp`" width="38" height="38" alt="" /><span class="brand-text"
-              ><strong>亿企工场</strong><small>ART SUPABASE PRO</small></span
+              ><strong>亿企工场</strong><small>YIQI WORKSHOP</small></span
             ></a
           >
           <p>一个底座，连接企业业务的每一步。</p>
@@ -421,8 +421,7 @@ function closeMenu() {
         </div>
       </div>
       <div class="container footer-bottom">
-        <span>© {{ new Date().getFullYear() }} Art Supabase Pro</span
-        ><span>以真实产品连接更多可能</span>
+        <span>© {{ new Date().getFullYear() }} 亿企工场</span><span>以真实产品连接更多可能</span>
       </div>
     </footer>
   </div>
