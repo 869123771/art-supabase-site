@@ -34,7 +34,7 @@ pnpm preview
 
 - 模块名称、简介和仓库链接：`src/modules.ts`。新增或修改子仓后同步更新此文件。
 - 页面结构与正文：`src/App.vue`；视觉样式：`src/style.css`。
-- 产品截图：`public/`。`dashboard.png`、`order-entry.png`、`safety.png` 分别对应主仓的 `screenshort/02-dashboard.png`、`03-smart-order.png`、`15-smis-emergency-drill-plan.png`。更新时同步检查替代文本和内容描述。
+- 产品截图：`public/`。`dashboard.png`、`order-entry.png`、`safety.png` 分别对应主仓的 `screenshots/02-dashboard.png`、`03-smart-order.png`、`15-smis-emergency-drill-plan.png`。更新时同步检查替代文本和内容描述。
 - 官网只介绍现有能力及建设方向。MES、WMS 等仍在建设的业务，不用“已上线”等措辞代替真实状态。
 
 ## 发布
